@@ -1,0 +1,24 @@
+{
+  "name": "bower",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.4.2",
+    "material-design-icons": "^3.0.1",
+    "angular-resource": "1.5.5",
+    "angular-material": "^1.1.4",
+    "animate.css": "^3.5.2"
+  }
+}
