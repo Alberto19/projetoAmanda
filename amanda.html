@@ -1,0 +1,286 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+
+    <body ng-app="BlankApp" ng-cloak>
+        <div ng-controller="login as vm">
+            <md-toolbar class="md-hue-2">
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+                        <md-icon ng-click="vm.home()">menu</md-icon>
+                    </md-button>
+
+                    <h2 flex md-truncate>YourTime - Sua Vez de Crescer</h2>
+
+                    <md-button ng-click="vm.login()" class="md-raised md-warn">login</md-button>
+
+                    <md-button class="md-icon-button" aria-label="More">
+                        <md-icon>more_vert</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <div layout-gt-sm="row">
+                <!--Card noticia-->
+                <div ng-show="vm.cards" flex-xs flex-gt-xs="20" layout-align="center center">
+                    <md-card>
+                        <img ng-src="http://www.clickgratis.com.br/fotos-imagens/imagens/aHR0cDovL3d3dy5jbGlja2dyYXRpcy5jb20uYnIvZm90b3MtaW1hZ2Vucy9pbWFnZW5zL2FIUjBjRG92TDNkM2R5NWpiR2xqYTJkeVlYUnBjeTVqYjIwdVluSXZabTkwYjNNdGFXMWhaMlZ1Y3k5cGJXRm5aVzV6TDJGSVVqQmpSRzkyVEROa00yUjVOV3BpUjJ4cVlUSmtlVmxZVW5CamVUVnFZakl3ZFZsdVNYWmFiVGt3WWpOTmRHRlhNV2hhTWxaMVkzazVjR0pYUm01YVZ6VjZUREpHU1ZWcVFtcFNSemt5VkVST2EwMHlValZPVjNCcFVqSjRjVmxVU210bFZteFpWVzVDYW1WVVZuRlpha2wzWkZac2RWTllXbUZpVkd0M1dXcE9UbVJIUmxoTlYyaGhUV3hhTVZremF6VmpSMHBZVW0wMVlWWjZWalpVUkVwSFUxWldjVkZ0Y0ZOU2VtdDVWa1ZTVDJFd01IbFZhbFpQVmpOQ2NGVnFTalJqVm14VlUyMTBiRlp0ZUZwV1Z6VkRZVzFXVlZadVJscGhhMnd6V2taYWMyUldUbGxYYlVacFZrZDBNMWRYY0U5VWJWSklVbXhvVGxZeWFHaFVWM2hoVFZacmVtRjZWbXBTTUhCWlZXMHdNVmxXV2paV2FscFZVa1Z3U0ZVeFdsZGpWa1owWTBaT1UyVnRkRFZXYTFaVFV6Sk9jazFZU2s1WFJVcFFWbXRXUzJJeFduVmpSbHBPVm0xME0xZHJhRTloUjBWNllVUkNWMUo2Vm1oWlZscFhUbTFHUlZac2NHbFNNbWg0VmtkNGExSnRWbk5VYkZaWFlYcEdjRll3VmtwbGJGbDVUbGR3VUZaclNsVlViR2hIWVd4SmVWUlViRTFpV0VJelYyNWpPVkJUTlhGalIyTTlMbXB3Wnc9PS5qcGc=.jpg"
+                            class="md-card-image" alt="Washed Out">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Action buttons</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                            <p>
+                                The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest
+                                Greene's musical language: feel it. It's a simple request, as well...
+                            </p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <img ng-src="http://www.clickgratis.com.br/fotos-imagens/imagens/aHR0cDovL3d3dy5jbGlja2dyYXRpcy5jb20uYnIvZm90b3MtaW1hZ2Vucy9pbWFnZW5zL2FIUjBjRG92TDNkM2R5NWpiR2xqYTJkeVlYUnBjeTVqYjIwdVluSXZabTkwYjNNdGFXMWhaMlZ1Y3k5cGJXRm5aVzV6TDJGSVVqQmpSRzkyVEROa00yUjVOV3BpUjJ4cVlUSmtlVmxZVW5CamVUVnFZakl3ZFZsdVNYWmFiVGt3WWpOTmRHRlhNV2hhTWxaMVkzazVjR0pYUm01YVZ6VjZUREpHU1ZWcVFtcFNSemt5VkVST2EwMHlValZPVjNCcFVqSjRjVmxVU210bFZteFpWVzVDYW1WVVZuRlpha2wzWkZac2RWTllXbUZpVkd0M1dXcE9UbVJIUmxoTlYyaGhUV3hhTVZremF6VmpSMHBZVW0wMVlWWjZWalpVUkVwSFUxWldjVkZ0Y0ZOU2VtdDVWa1ZTVDJFd01IbFZhbFpQVmpOQ2NGVnFTalJqVm14VlUyMTBiRlp0ZUZwV1Z6VkRZVzFXVlZadVJscGhhMnd6V2taYWMyUldUbGxYYlVacFZrZDBNMWRYY0U5VWJWSklVbXhvVGxZeWFHaFVWM2hoVFZacmVtRjZWbXBTTUhCWlZXMHdNVmxXV2paV2FscFZVa1Z3U0ZVeFdsZGpWa1owWTBaT1UyVnRkRFZXYTFaVFV6Sk9jazFZU2s1WFJVcFFWbXRXUzJJeFduVmpSbHBPVm0xME0xZHJhRTloUjBWNllVUkNWMUo2Vm1oWlZscFhUbTFHUlZac2NHbFNNbWg0VmtkNGExSnRWbk5VYkZaWFlYcEdjRll3VmtwbGJGbDVUbGR3VUZaclNsVlViR2hIWVd4SmVWUlViRTFpV0VJelYyNWpPVkJUTlhGalIyTTlMbXB3Wnc9PS5qcGc=.jpg"
+                            class="md-card-image" alt="Washed Out">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Action buttons</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                            <p>
+                                The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest
+                                Greene's musical language: feel it. It's a simple request, as well...
+                            </p>
+                        </md-card-content>
+                    </md-card>
+                </div>
+                <!--Card noticia-->
+
+                <!--Card form pesquisa-->
+                <div ng-show="vm.cards" flex-xs flex-gt-xs="80">
+                    <md-content layout-padding>
+                        <div>
+                            <form name="userForm">
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block col-md-5" flex-gt-sm>
+                                        <label>Pesquisar Vagas: </label>
+                                        <input ng-model="vm.email">
+                                    </md-input-container>
+                                </div>
+                            </form>
+                        </div>
+                    </md-content>
+                    <!--Card de vaga-->
+                    <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Card with image</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <div class="md-media-xl card-media">
+                                <div layout="row">
+                                    <h3>Ola ???</h3>
+                                </div>
+                            </div>
+
+                            <md-card-actions layout="column">
+                                <md-button class="md-icon-button" aria-label="Favorite">
+                                    <md-icon>favorite</md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" aria-label="Settings">
+                                    <md-icon>menu</md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <md-icon>share-arrow</md-icon>
+                                </md-button>
+                            </md-card-actions>
+                        </md-card-content>
+                    </md-card>
+                    <!--Card de vaga-->
+                </div>
+                <!--Card noticia-->
+            </div>
+            <!--Form de login-->
+            <div ng-show="vm.initLogin" layout="column" ng-cloak class="row md-inline-form">
+                <md-content layout-padding>
+                    <div>
+                        <form name="userForm">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block col-md-5" flex-gt-sm>
+                                    <label>E-mail: </label>
+                                    <input ng-model="vm.email">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Senha: </label>
+                                    <input ng-model="vm.senha" type="password">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row" layout-align="center center">
+                                <md-button class="md-raised md-primary">Login</md-button>
+                                <md-button ng-click="vm.register()" class="md-raised md-warn">Cadastre-se</md-button>
+                                <md-button ng-click="vm.registerCompany()" class="md-raised md-primary md-hue-2">Cadastre sua empresa</md-button>
+                            </div>
+                        </form>
+                    </div>
+                </md-content>
+            </div>
+            <!--Form de login-->
+            <!--Form de cadastro-->
+            <div ng-show="vm.registerForm" layout="column" ng-cloak class="row md-inline-form">
+                <md-content layout-padding>
+                    <div>
+                        <form name="userForm">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block col-md-5" flex-gt-sm>
+                                    <label>E-mail: </label>
+                                    <input ng-model="vm.email">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Senha: </label>
+                                    <input ng-model="vm.senha" type="password">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block col-md-5" flex-gt-sm>
+                                    <label>Nome: </label>
+                                    <input ng-model="vm.name">
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Endereço: </label>
+                                    <input ng-model="vm.endereco">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Escolarida: </label>
+                                    <input ng-model="vm.escolaridade">
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Area de atuação: </label>
+                                    <input ng-model="vm.area">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Data de nascimento: </label>
+                                    <md-datepicker ng-model="vm.birthDate" md-placeholder="Enter date"></md-datepicker>
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row" layout-align="center center">
+                                <md-button ng-click="vm.register()" class="md-raised md-warn">Registrar</md-button>
+                            </div>
+                        </form>
+                    </div>
+                </md-content>
+            </div>
+            <!--Form de cadastro-->
+
+            <!--Form de cadastro da empresa-->
+            <div ng-show="vm.registerCompanyForm" layout="column" ng-cloak class="row md-inline-form">
+                <md-content layout-padding>
+                    <div>
+                        <form name="userForm">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block col-md-5" flex-gt-sm>
+                                    <label>E-mail: </label>
+                                    <input ng-model="vm.emailCompany">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Senha: </label>
+                                    <input ng-model="vm.senhaCompany" type="password">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block col-md-5" flex-gt-sm>
+                                    <label>Nome da Empresa: </label>
+                                    <input ng-model="vm.nameCompany">
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Endereço: </label>
+                                    <input ng-model="vm.enderecoCompany">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>CNPJ: </label>
+                                    <input ng-model="vm.cnpj">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row" layout-align="center center">
+                                <md-button ng-click="vm.registerCompany()" class="md-raised md-warn">Registrar Empresa</md-button>
+                            </div>
+                        </form>
+                    </div>
+                </md-content>
+            </div>
+            <!--Form de cadastro da empresa-->
+
+        </div>
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+        <!-- Your application bootstrap  -->
+        <script type="text/javascript">
+            /**
+             * You must include the dependency on 'ngMaterial' 
+             */
+            angular.module('BlankApp', ['ngMaterial'])
+                .controller('login', function () {
+                    vm = this;
+                    vm.login = login;
+                    vm.initLogin = false;
+                    vm.cards = true;
+                    vm.registerForm = false;
+                    vm.register = register;
+                    vm.registerCompanyForm = false
+                    vm.registerCompany = registerCompany;
+                    vm.home = home;
+
+                    function login() {
+                        vm.cards = false;
+                        vm.registerForm = false;
+                        vm.registerCompanyForm = false;
+                        vm.initLogin = true;
+                    }
+
+                    function register() {
+                        vm.cards = false;
+                        vm.initLogin = false;
+                        vm.registerForm = true;
+                    }
+
+                    function registerCompany() {
+                        vm.cards = false;
+                        vm.initLogin = false;
+                        vm.registerForm = false;
+                        vm.registerCompanyForm = true;
+                    }
+                    
+                    function home() {
+                        vm.cards = true;
+                        vm.registerForm = false;
+                        vm.registerCompanyForm = false;
+                        vm.initLogin = false;
+                    }
+
+                })
+        </script>
+
+    </body>
+
+</html>
